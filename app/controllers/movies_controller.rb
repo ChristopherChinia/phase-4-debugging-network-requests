@@ -5,4 +5,10 @@ class MoviesController < ApplicationController
     render json: movies
   end
 
+  def create
+    movie = Movie.create(movie_params)
+    render json: movie, status: :created
+  end
+  
+
 end
